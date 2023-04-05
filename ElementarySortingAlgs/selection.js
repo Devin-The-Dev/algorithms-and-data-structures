@@ -1,8 +1,10 @@
 // The Selection sorting algorithm "selects" the minimum value to the right of the key index
 // The indexes of the minimum value and key will trade spots, iff the minimum value is less than the key
-var arr = [4,3,2,5,1];
 
-console.log("Initial order: " + arr);
+// Take all numbers from the terminal into an array, starting from the second index
+var arr = process.argv.slice(2).map(num => parseFloat(num));
+
+console.log(`Initial order: ${arr}`);
 console.log();
 
 // Loop through the first element to the second-to-last element (The last element will be switched at the end, if needed)
@@ -22,7 +24,7 @@ for (i = 0; i < arr.length - 1; i++) {
     arr[i] = temp;
     
     // Results after each iteration
-    console.log("Iteration " + (i + 1) + ": " + arr);
+    console.log(`Iteration ${i + 1}: ${arr}`);
 }
 console.log();
-console.log("Selection sort order: " + arr);
+console.log(`Selection sort order: ${arr}`);
